@@ -16,22 +16,24 @@ public class MyFirstSwingGUI {
 	public void run() {
 
 		// 1. Create and initialize an object of the JFrame class
-		JFrame bass = new JFrame();
+		JFrame benitomussolini = new JFrame();
 		// 2. Set your JFrame object to be visible
-		bass.setVisible(true);
+		benitomussolini.setVisible(true);
 		// 3. Run your program. Do you see your window? It's probably very
 		// small.
 
 		// 4. Set the default close operation to JFrame.EXIT_ON_CLOSE
-
+		benitomussolini.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// 5. Create and initialize an object of the JPanel class
-
+	JPanel karlhenrichmarx = new JPanel();
 		// 6. Create and initialize an object of the JLabel class
 
-		// 7. Set the text of the JLabel to a lovely greeting.
+	JLabel  VladimirIlyichUlyanov = new JLabel();
+	 VladimirIlyichUlyanov.setText("hello Ioseb Besarionis dze Jughashvili Vladimir Ilyich Ulyanov Karl Heinrich Marx Lev Davidovich Bronshtein Benito Amilcare Andrea Mussolini Nikita Sergeyevich Khrushchev Leonid Ilyich Brezhnev Vladimir Vladimirovich Putin Fidel Alejandro Castro Ruz Michinomiya Hirohito Mikhail Sergeyevich Gorbachev Boris Nikolayevich Yeltsin Ernesto Rafael Guevara de la Serna get out");
+	// 7. Set the text of the JLabel to a lovely greeting.
 
 		// 8. Add the JPanel object to the JFrame
-
+		benitomussolini.add(karlhenrichmarx);
 		// 9. Add the JLabel object to the JPanel
 
 		// 10. Pack your JFrame.
