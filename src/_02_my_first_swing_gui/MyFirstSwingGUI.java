@@ -1,3 +1,7 @@
+
+
+
+
 package _02_my_first_swing_gui;
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2019
@@ -13,6 +17,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class MyFirstSwingGUI {
+	
+	public static void main(String[] args) {
+		MyFirstSwingGUI capitalism = new MyFirstSwingGUI();
+		capitalism.run();
+	}
 	public void run() {
 
 		// 1. Create and initialize an object of the JFrame class
@@ -35,13 +44,13 @@ public class MyFirstSwingGUI {
 		// 8. Add the JPanel object to the JFrame
 		benitomussolini.add(karlhenrichmarx);
 		// 9. Add the JLabel object to the JPanel
-
+		karlhenrichmarx.add(VladimirIlyichUlyanov);
 		// 10. Pack your JFrame.
-
+		benitomussolini.pack();
 		// 11. Run your program again. Do you see your message.
 
 		// 12. Use the loadImage method to set the icon of the JLabel object.
-
+		
 		// 13. Re-pack the JFrame object.
 
 		// 14. Run the program one more time. Do you see the image?
