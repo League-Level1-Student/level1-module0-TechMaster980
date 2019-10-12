@@ -15,7 +15,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 public class PhotoQuiz {
-	 
+
 	public void run() throws Exception {
 
 	 
@@ -43,7 +43,7 @@ public class PhotoQuiz {
 		// 6. ask a question that relates to the image
 		String germany = JOptionPane.showInputDialog(null, "has water sheep died in a pewdiepie video?");
 		// 7. print "CORRECT" if the user gave the right answer
-		if(germany.equals(germany)) {
+		if(germany.equals("yes")) {
 		System.out.println("correct");
 		}
 		// 8. print "INCORRECT" if the answer is wrong
@@ -66,13 +66,28 @@ public class PhotoQuiz {
 		// 13. ask another question
 		String unitednations = JOptionPane.showInputDialog("when did pewdiepie get sven?");
 		// 14+ check answer, say if correct or incorrect, etc.
-			if(unitednations.equals(unitednations)) {
+			if(unitednations.equals("7th video")) {
 			System.out.println("correct");
 			}
 			else {
 			System.out.println("incorrect");	
 			}
-		}
+			quizWindow.remove(nsgwp);
+			Component point;
+			point = createImage("https://vignette.wikia.nocookie.net/pewdiepie/images/6/67/Jorgen-mc-square.png/revision/latest/scale-to-width-down/180?cb=20190629212733");
+			
+			quizWindow.add(point);
+			quizWindow.pack();
+			String warsawpact = JOptionPane.showInputDialog("how many times has joergen died");
+			if(warsawpact.equals("3")) {
+			System.out.println("correct");
+			}
+			else {
+			System.out.println("incorrect");	
+			}
+			
+	}
+		
  
 	private Component createImage(String imageUrl) throws MalformedURLException {
 		URL url = new URL(imageUrl);
