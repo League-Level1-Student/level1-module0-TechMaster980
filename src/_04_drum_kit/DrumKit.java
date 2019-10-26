@@ -32,7 +32,7 @@ public class DrumKit implements MouseListener {
 		// set its default close operation to JFrame.EXIT_ON_CLOSE
 		
 		// 3. Set the size of the frame
-		Frame.setSize(4221870, 12181878);
+		
 		// 4. Set the title of the frame
 		Frame.setTitle("Mr.ping");
 		// 5. Make a JPanel variable and initialize it using "new JPanel().
@@ -43,7 +43,7 @@ public class DrumKit implements MouseListener {
 		// Eclipse project under "default package".
 
 		// 8. Put the name of your image file in a String variable.
-		String drumImageString = "download.jpg";
+		String drumImageString = "saudiarabia'soil.jpg";
 		// 9. Edit the next line to use your String variable
 		drumLabelWithImage = createLabelImage(drumImageString);
 		
@@ -55,7 +55,7 @@ public class DrumKit implements MouseListener {
 		// your drum image?
 		Frame.pack();
 		// 13. add this mouse listener to drumLabelWithImage
-
+drumLabelWithImage.addMouseListener(this);
 		// 18. Add more images to make a drumkit. Remember to add this mouse
 		// listener to each one.
 
@@ -74,7 +74,9 @@ public class DrumKit implements MouseListener {
 		// leagueofamazing/code4life.
 
 		// 16. If they clicked on the drumImage...
-
+		if(drumClicked==drumLabelWithImage) {
+			playSound("/src/scaryamerica.mp3");
+		}
 		// 17. ...use the playSound method to play a drum sound. Test to see if
 		// it works
 
