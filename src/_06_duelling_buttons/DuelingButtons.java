@@ -25,6 +25,8 @@ public class DuelingButtons implements ActionListener {
 	JPanel panel = new JPanel();
 
 	public void run() {
+frame.setPreferredSize(new Dimension(800, 800));
+
 
 		// 1. Add the panel to the frame
 		frame.add(panel);
@@ -35,35 +37,39 @@ public class DuelingButtons implements ActionListener {
 		// 4. Set the text of the rightButton to "Click me!"
 		rightButton.setText("click me");
 		// 5. Add an action listener to the leftButton
-		leftButton.addActionListener(null);
+		leftButton.addActionListener(this);
 		// 6. Add an action listener to the rightButton
-		rightButton.addActionListener(null);
+		rightButton.addActionListener(this);
 		// 7. Add the leftButton to the panel
-		leftButton.equals(panel);
+		panel.add(leftButton);
 		// 8. Add the rightButton to the panel
-		rightButton.equals(panel);
+		panel.add(rightButton);
 		// 9. Pack the frame
 		frame.pack();
 		// 10. Set the title of the frame to "Demanding Buttons"
 		frame.setTitle("demanding buttons");
-		
-		if(leftButton.equals(leftButton)) {
-		rightButton.equals(BIG);{
-		System.out.println("no pick me");
-		}
-		}
-		else {
-			rightButton.equals(rightButton) {
-				leftButton.equals(SMALL);
-				
-			}
-		}
 	}
+	
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		JButton buttonPressed = (JButton) arg0.getSource();
-
+		if(buttonPressed.equals(leftButton)) {
+			rightButton.setPreferredSize(BIG);
+			rightButton.setText("No, click me");
+			leftButton.setPreferredSize(SMALL);
+			leftButton.setText("CLICK ME");
+			}
+			if(buttonPressed.equals(rightButton)) {
+				leftButton.setPreferredSize(BIG);
+				leftButton.setText("No, click me");
+				rightButton.setPreferredSize(SMALL);
+				rightButton.setText("CLICK ME");
+			}
+					
+					
+				
+			}
 		/* If the buttonPressed was the leftButton.... */
 		// Set the text of the rightButton to "No, click Me!"
 		// Set the PREFERRED size of the rightButton to BIG
@@ -72,6 +78,6 @@ public class DuelingButtons implements ActionListener {
 
 		/* If the buttonPressed was the rightButton, do the opposite. */
 
-		frame.pack();
+		//frame.pack();
 	}
-}
+
