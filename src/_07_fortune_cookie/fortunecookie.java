@@ -38,7 +38,7 @@ public class fortunecookie implements ActionListener {
 	    
         int rand = new Random().nextInt(5);
         if(rand == 0) {
-        JOptionPane.showMessageDialog(null,"henry sucks");
+        JOptionPane.showMessageDialog(null,"henry sucks and is stupid");
         }
         if(rand == 1) {
         JOptionPane.showMessageDialog(null,"china");

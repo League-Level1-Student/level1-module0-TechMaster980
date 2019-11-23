@@ -1,6 +1,9 @@
 package _08_jack_in_the_box;
 
 import java.applet.AudioClip;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Random;
 
 import javax.print.DocFlavor.URL;
 import javax.swing.Icon;
@@ -11,7 +14,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class jitb {
+public class jitb implements ActionListener{
 	public static void main(String[] args) {
 		
 	}
@@ -23,21 +26,22 @@ public class jitb {
 		 System.out.println("Button clicked");
   
    
-
 		frame.setVisible(true);
         JButton button = new JButton();
         frame.add(button);
         frame.pack();
         button.addActionListener(this);
         
-    
+   
 	 
 	 
+	 
+		 
 	 
 	 }
-	private void showPicture(String jackinthebox) { 
+	private void showPicture(String fathenry) { 
 	     try {
-	          JLabel imageLabel = createLabelImage(jackinthebox);
+	          JLabel imageLabel = createLabelImage(fathenry);
 	          JFrame frame = new JFrame();
 	          frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	          frame.add(imageLabel);
@@ -48,11 +52,11 @@ public class jitb {
 	     }
 	}
 
-	private JLabel createLabelImage(String fileName) {
+	private JLabel createLabelImage(String fathenry) {
 	     try {
-	          java.net.URL imageURL = getClass().getResource(fileName);
+	          java.net.URL imageURL = getClass().getResource(fathenry);
 	          if (imageURL == null) {
-	               System.err.println("Could not find image " + fileName);
+	               System.err.println("Could not find image " + fathenry);
 	               return new JLabel();
 	          } else {
 	               Icon icon = new ImageIcon();
@@ -60,10 +64,11 @@ public class jitb {
 	               return imageLabel;
 	          }
 	     } catch (Exception e) {
-	          System.err.println("Could not find image " + fileName);
+	          System.err.println("Could not find image " + fathenry);
 	          return new JLabel();
 	     }
 	}
+	
 	private void playSound(String soundFile) { 
 	     try {
 	          AudioClip sound = JApplet.newAudioClip(getClass().getResource(soundFile));
@@ -72,6 +77,32 @@ public class jitb {
 	          e.printStackTrace();
 	     }
 	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		  int rand = new Random().nextInt(5);
+		  if(rand == 0) {
+			 System.out.println("hi");
+		  }
+		  if(rand == 1) {
+			  
+		  }
+		  if(rand == 2) {
+			  
+		  }
+		  if(rand == 3) {
+			  
+		  }
+		  if(rand == 4) {
+			  
+		  }
+	
+	
+	
+	
+	
+	
+	}	
 
 
 	
