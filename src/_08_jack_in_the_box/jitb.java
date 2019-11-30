@@ -82,7 +82,7 @@ public class jitb implements ActionListener{
 		// TODO Auto-generated method stub
 		  int rand = new Random().nextInt(5);
 		  if(rand == 0) {
-			 System.out.println("hi");
+			 System.out.println("");
 		  }
 		  if(rand == 1) {
 			  
