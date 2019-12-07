@@ -15,15 +15,15 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class jitb implements ActionListener{
-	public static void main(String[] args) {
-		
-	}
+	int count = 0;
+	
+	
 	public void showButton() {
         
 		 JFrame frame = new JFrame();
 			JPanel panel = new JPanel();
 		 
-		 System.out.println("Button clicked");
+	
   
    
 		frame.setVisible(true);
@@ -79,8 +79,14 @@ public class jitb implements ActionListener{
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		 System.out.println("Button clicked");
 		// TODO Auto-generated method stub
 		  int rand = new Random().nextInt(5);
+		  count++;
+		  System.out.println(count);
+		  if(count == 5) {
+			showPicture("/_08_jack_in_the_box/fathenry.png");
+		  }
 		  if(rand == 0) {
 			 System.out.println("");
 		  }
@@ -89,7 +95,7 @@ public class jitb implements ActionListener{
 		  }
 		  if(rand == 2) {
 			  
-		  }
+		  }	
 		  if(rand == 3) {
 			  
 		  }
