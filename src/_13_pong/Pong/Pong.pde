@@ -1,28 +1,71 @@
   import ddf.minim.*;
   Minim minim;
   AudioSample sound;
+ int x = 500;
+ int y = 250;
   PImage backgroundImage;
 //1. Start a new sketch with draw and setup methods.
 
 //2. Set your canvas size and background color in the setup method
 void setup(){
-    size(1000, 500);
-    background(5, 5, 5);
+    size(1000, 490);
+    
    minim = new Minim (this);
   sound = minim.loadSample("pong.wav", 128);
   backgroundImage = loadImage("pong.png");
 }
 //3. In your draw method, draw a ball on the screen.
 void draw(){
+  background(5, 5, 5);
   fill(255, 255, 255);
   stroke(5, 5, 5);
-  ellipse(500, 250, 10, 10);
+  rect(x, y, 10, 10);
 sound.trigger();
 image(backgroundImage, 600, 500);
     image(backgroundImage, 1000, 500, 1000,500);
- rect(1, mouseY, 10, 100);
- rect(987, mouseY, 10, 100);
- rect(500, 0, 5, 800);
+ rect(150, mouseY, 10, 50);
+ rect(850, mouseY, 10, 50);
+ rect(500, 4, 5, 10);
+ rect(500, 20, 5, 10);
+ rect(500, 36, 5, 10);
+ rect(500, 52, 5, 10);
+ rect(500, 68, 5, 10);
+ rect(500, 84, 5, 10);
+ rect(500, 100, 5, 10);
+ rect(500, 116, 5, 10);
+ rect(500, 132, 5, 10);
+ rect(500, 148, 5, 10);
+ rect(500, 164, 5, 10);
+ rect(500, 180, 5, 10);
+ rect(500, 196, 5, 10);
+ rect(500, 212, 5, 10);
+ rect(500, 228, 5, 10);
+ rect(500, 244, 5, 10);
+ rect(500, 260, 5, 10);
+ rect(500, 276, 5, 10);
+ rect(500, 292, 5, 10);
+ rect(500, 308, 5, 10);
+ rect(500, 324, 5, 10);
+ rect(500, 340, 5, 10);
+ rect(500, 356, 5, 10);
+ rect(500, 372, 5, 10);
+ rect(500, 388, 5, 10);
+ rect(500, 404, 5, 10);
+ rect(500, 420, 5, 10);
+ rect(500, 436, 5, 10);
+ rect(500, 452, 5, 10);
+ rect(500, 468, 5, 10);
+ rect(500, 484, 5, 10);
+if(850==x || 150==x){
+if(mouseY==y || mouseY==y ){
+x-=3;
+y-=1;
+}
+}
+else{
+x+=3;
+y+=1;
+}
 }
 //4. Make the ball move across the screen (left to right).
      // Hint: make a variable for the ball's X position and change it in the draw method.
