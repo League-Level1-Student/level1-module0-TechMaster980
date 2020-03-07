@@ -9,6 +9,14 @@ PImage backgroundImage;
 //1. Start a new sketch with draw and setup methods.
 
 //2. Set your canvas size and background color in the setup method
+int score = 0;
+   void checkCatch(int x){
+        if (x > mouseX && x < mouseX+100)
+           score++;
+         else if (score > 0) 
+           score--;
+       println("" + score);
+   }
 void setup() {
   size(1000, 490);
 
@@ -69,6 +77,10 @@ void draw() {
   //}
   x=x+speedx;
   y=y+speedy;
+  textSize(100);
+   text("" + score, 350, 90);
+   textSize(100);
+   text("" + score, 600, 90);
   //4. Make the ball move across the screen (left to right).
   // Hint: make a variable for the ball's X position and change it in the draw method.
 
@@ -79,21 +91,32 @@ void draw() {
 
 
   //6. Bounce the ball off the side walls. Hint: Use the value width that Processing provides.
+  
   if (x<=0) {
+     score=score+1;
     speedx=-speedx;
   }
   if (x>=1000) {
+    score=score+1;
     speedx=-speedx;
   }
 
   //7. Do the same for the top and bottom Hint: Use the value height that Processing provides.
   if (y>=490) {
-    speedy=-speedy;
+speedy=-speedy;
   }
   if (y<=0) {
-    speedy=-speedy;
-  }
-
+  speedy=-speedy;
+  
+ }
+boolean cccp = intersects(x, y, 150, mouseY, 10);
+ if (cccp == true){
+ speedx = -speedx;
+ }
+ boolean china = intersects(x, y, 850, mouseY, 10);
+ if (china == true){
+ speedx = -speedx;
+ }
   //8. Make a sound when the ball falls on the ground. You will need to drop a sound file (pong.wav) on your sketch. Then add the following code. Note: You may need to import the Minim library into your sketch. Ask your teacher how to do this.
 
   //At the top of the sketch:
